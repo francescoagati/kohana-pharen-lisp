@@ -1,0 +1,8 @@
+(class-extends Controller_Welcome (Controller_Template) 
+  
+  (attr template #site)
+  
+  (method action-index () (echo #hello-world ) 
+    (= (-> this template message) "ciao")
+    FALSE
+      ))
