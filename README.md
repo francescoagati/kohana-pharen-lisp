@@ -3,3 +3,5 @@ For using the form class-extends must use my fork of pharen https://github.com/f
 
 for example code see:
 https://github.com/francescoagati/kohana-pharen-lisp/blob/master/application/classes/controller/welcome.phn
+and
+https://github.com/francescoagati/kohana-pharen-lisp/blob/master/application/classes/controller/welcome2.phn
