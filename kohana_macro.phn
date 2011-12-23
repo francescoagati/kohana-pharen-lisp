@@ -1,0 +1,19 @@
+(defmacro controller-template (name &body)
+  '(class-extends ~name (Controller_Template) ~@body))
+
+(defmacro action (name &body)
+  (def name-action (. "action-" name  ))
+  '(method ~-name-action ()  ~@body FALSE))
+
+(defmacro ctl-before (&body)   
+  '(method before () 
+        ~@body
+        (:: parent (before))
+        FALSE))
+
+(defmacro ctl-after (&body)   
+  '(method after () 
+        ~@body
+        (:: parent (after))
+        FALSE))
+

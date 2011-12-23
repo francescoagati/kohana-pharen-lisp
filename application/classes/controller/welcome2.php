@@ -5,8 +5,27 @@ class Controller_Welcome2 extends Controller_Template{
 			public $template = "site";
 
 
+				public function before(){
+		echo("before");
+		echo(123);
+		parent::before();
+		return FALSE;
+	}
+	
+
+
+
+				public function after(){
+		echo("after");
+		echo(456);
+		parent::after();
+		return FALSE;
+	}
+	
+
+
+
 				public function action_index(){
-		echo("hello_world");
 		$this->template->message = "ciao2";
 		return FALSE;
 	}

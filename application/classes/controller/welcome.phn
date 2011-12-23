@@ -2,6 +2,8 @@
   
   (attr template #site)
   
+
+  
   (method action-index () (echo #hello-world ) 
     (= (-> this template message) "ciao")
     FALSE

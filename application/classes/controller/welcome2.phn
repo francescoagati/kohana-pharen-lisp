@@ -1,14 +1,8 @@
-(defmacro controller-template (name &body)
-  '(class-extends ~name (Controller_Template) ~@body))
-
-(defmacro action (name &body)
-  (def name-action (. "action-" name  ))
-  '(method ~-name-action ()  ~@body FALSE))
-
 (controller-template Controller_Welcome2
   
-  (attr template #site)
+    (attr template #site)
    
-  (action index 
-    (echo #hello-world )
-    (= (-> this template message) "ciao2")))
+    (ctl-before (echo #before) (echo 123))
+    (ctl-after (echo #after) (echo 456))
+   
+    (action index  (= (-> this template message) "ciao2")))

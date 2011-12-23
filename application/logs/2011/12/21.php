@@ -533,3 +533,15 @@
 #4 /Applications/MAMP/htdocs/kohanalisp/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
 #5 /Applications/MAMP/htdocs/kohanalisp/index.php(109): Kohana_Request->execute()
 #6 {main}
+2011-12-21 17:57:45 --- ERROR: View_Exception [ 0 ]: The requested view template could not be found ~ SYSPATH/classes/kohana/view.php [ 252 ]
+2011-12-21 17:57:45 --- STRACE: View_Exception [ 0 ]: The requested view template could not be found ~ SYSPATH/classes/kohana/view.php [ 252 ]
+--
+#0 /Applications/MAMP/htdocs/kohanalisp/system/classes/kohana/view.php(137): Kohana_View->set_filename('template')
+#1 /Applications/MAMP/htdocs/kohanalisp/system/classes/kohana/view.php(30): Kohana_View->__construct('template', NULL)
+#2 /Applications/MAMP/htdocs/kohanalisp/system/classes/kohana/controller/template.php(33): Kohana_View::factory('template')
+#3 [internal function]: Kohana_Controller_Template->before()
+#4 /Applications/MAMP/htdocs/kohanalisp/system/classes/kohana/request/client/internal.php(103): ReflectionMethod->invoke(Object(Controller_Welcome2))
+#5 /Applications/MAMP/htdocs/kohanalisp/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#6 /Applications/MAMP/htdocs/kohanalisp/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#7 /Applications/MAMP/htdocs/kohanalisp/index.php(109): Kohana_Request->execute()
+#8 {main}
